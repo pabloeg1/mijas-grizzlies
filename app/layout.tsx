@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Grizzlies Futsal Club | La fuerza de la manada',
-  description: 'Web oficial de Grizzlies Futsal Club: plantilla, resultados, clasificación y estadísticas.',
+  title: 'Grizzlies Futsal Club | La fuerza de una familia',
+  description: 'Web oficial de Grizzlies FC: plantilla, resultados, clasificación y estadísticas.',
   generator: 'v0.app',
   icons: {
     icon: [
