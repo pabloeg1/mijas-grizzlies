@@ -1,6 +1,11 @@
 export const crestUrl = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Escudo%20GRIZZLIES-AtckxhFlCU2cd0McGz8Fpiv5LZBGQf.jpeg'
+export const clubTeamName = 'GRIZZLIES FC 26/27'
+export const competitionName = 'LLFS FUENGIROLA/INFINITY'
+export const competitionSourceUrl = 'https://www.competize.com/es/team/view/2869908-grizzlies-fc-2627#standings'
 
 export type Player = { number: number; name: string; position: string; photo: string | null; age: number; nationality: string; height: string; foot: string; appearances: number; goals: number; assists: number; bio: string }
+export type Standing = { team: string; played: number; won: number; drawn: number; lost: number; goalsFor: number; goalsAgainst: number; goalDifference: number; points: number }
+export type Fixture = { date: string; time: string; opponent: string; venue: string; home: boolean; homeScore?: number; awayScore?: number; status?: string }
 
 export const players: Player[] = [
   { number: 1, name: 'Gabriel Padrino', position: 'Portero', photo: '/jugadores/GABRIEL-PADRINO.png', age: 22, nationality: 'España', height: '1,86 m', foot: 'Derecho', appearances: 4, goals: 0, assists: 0, bio: 'Nuestro muro. Un seguro bajo palos.' },
@@ -20,13 +25,35 @@ export const players: Player[] = [
 
 ]
 
-export const table = ['INTER COSTASUR 26/27', 'ARSENAL DE BOTELLINES 26/27', 'ALBIRROJA 26/27', 'SUPABROS FS 26/27', 'MAITEA 26/27', 'UVEME LOS BOLICHES 26/27', 'EL BOLICHE 26/27', 'GRIZZLIES FC 26/27', 'ATLEET 26/27', 'EL BOQUETILLO 26/27', 'NEW BOYS FC 26/27', 'LVK BAYER 26/27', 'ESPETOS FC 26/27', 'LOLA´S BAR FUENGIROLA CH8 26/27', 'C.D COSTASOLEÑO 26/27', 'NOSOTROS C.F', 'DESCANSO 26/27', 'LOS MILNOV FC 26/27', 'JUNGLE FC 26/27', 'PM SUPERPANTERAS 26/27'].map((team, index) => ({ team, played: 18, won: 14 - Math.floor(index / 5), drawn: index % 4 === 0 ? 2 : 1, lost: 18 - (14 - Math.floor(index / 5)) - (index % 4 === 0 ? 2 : 1), points: 44 - index * 2 }))
-
-export const fixtures = [
-  { date: 'DOM 18 OCT', time: '00:00', opponent: 'SUPABROS FS 26/27', venue: 'Campo Elola', home: true },
-  { date: 'DOM 25 OCT', time: '00:00', opponent: 'RIVAL POR DEFINIR', venue: 'Campo Elola', home: false },
-  { date: 'DOM 01 NOV', time: '00:00', opponent: 'RIVAL POR DEFINIR', venue: 'Campo Elola', home: true },
+export const table: Standing[] = [
+  { team: 'INTER COSTASUR 26/27', played: 2, won: 2, drawn: 0, lost: 0, goalsFor: 11, goalsAgainst: 4, goalDifference: 7, points: 6 },
+  { team: 'EL BOQUETILLO 26/27', played: 2, won: 2, drawn: 0, lost: 0, goalsFor: 7, goalsAgainst: 1, goalDifference: 6, points: 6 },
+  { team: 'EL BOLICHE 26/27', played: 2, won: 2, drawn: 0, lost: 0, goalsFor: 9, goalsAgainst: 5, goalDifference: 4, points: 6 },
+  { team: 'ALBIRROJA 26/27', played: 2, won: 1, drawn: 1, lost: 0, goalsFor: 6, goalsAgainst: 5, goalDifference: 1, points: 4 },
+  { team: 'SUPABROS FS 26/27', played: 1, won: 1, drawn: 0, lost: 0, goalsFor: 8, goalsAgainst: 1, goalDifference: 7, points: 3 },
+  { team: 'UVEME LOS BOLICHES 26/27', played: 2, won: 1, drawn: 0, lost: 1, goalsFor: 5, goalsAgainst: 3, goalDifference: 2, points: 3 },
+  { team: 'NEW BOYS FC 26/27', played: 2, won: 1, drawn: 0, lost: 1, goalsFor: 6, goalsAgainst: 5, goalDifference: 1, points: 3 },
+  { team: 'ATLEET 26/27', played: 1, won: 1, drawn: 0, lost: 0, goalsFor: 5, goalsAgainst: 4, goalDifference: 1, points: 3 },
+  { team: 'NOSOTROS C.F', played: 1, won: 1, drawn: 0, lost: 0, goalsFor: 3, goalsAgainst: 2, goalDifference: 1, points: 3 },
+  { team: 'ESPETOS FC 26/27', played: 2, won: 1, drawn: 0, lost: 1, goalsFor: 7, goalsAgainst: 8, goalDifference: -1, points: 3 },
+  { team: 'MAITEA 26/27', played: 2, won: 1, drawn: 0, lost: 1, goalsFor: 6, goalsAgainst: 8, goalDifference: -2, points: 3 },
+  { team: 'ARSENAL DE BOTELLINES 26/27', played: 2, won: 0, drawn: 1, lost: 1, goalsFor: 6, goalsAgainst: 7, goalDifference: -1, points: 1 },
+  { team: 'DESCANSO 26/27', played: 0, won: 0, drawn: 0, lost: 0, goalsFor: 0, goalsAgainst: 0, goalDifference: 0, points: 0 },
+  { team: 'LOS MILNOV FC 26/27', played: 1, won: 0, drawn: 0, lost: 1, goalsFor: 2, goalsAgainst: 3, goalDifference: -1, points: 0 },
+  { team: 'C.D COSTASOLEÑO 26/27', played: 2, won: 0, drawn: 0, lost: 2, goalsFor: 5, goalsAgainst: 7, goalDifference: -2, points: 0 },
+  { team: clubTeamName, played: 1, won: 0, drawn: 0, lost: 1, goalsFor: 2, goalsAgainst: 4, goalDifference: -2, points: 0 },
+  { team: 'LVK BAYER 26/27', played: 1, won: 0, drawn: 0, lost: 1, goalsFor: 1, goalsAgainst: 3, goalDifference: -2, points: 0 },
+  { team: 'JUNGLE FC 26/27', played: 1, won: 0, drawn: 0, lost: 1, goalsFor: 1, goalsAgainst: 5, goalDifference: -4, points: 0 },
+  { team: 'LOLA´S BAR FUENGIROLA CH8 26/27', played: 1, won: 0, drawn: 0, lost: 1, goalsFor: 0, goalsAgainst: 4, goalDifference: -4, points: 0 },
+  { team: 'PM SUPERPANTERAS 26/27', played: 2, won: 0, drawn: 0, lost: 2, goalsFor: 1, goalsAgainst: 12, goalDifference: -11, points: 0 },
 ]
+
+export const fixtures: Fixture[] = [
+  { date: 'DOM 06 SEP', time: '10:00', opponent: 'EL BOLICHE 26/27', venue: 'PABELLON ELOLA - ELOLA SQUA', home: false, homeScore: 4, awayScore: 2, status: 'Finalizado' },
+  { date: 'DOM 13 SEP', time: '12:00', opponent: 'LVK BAYER 26/27', venue: 'PABELLON ELOLA - ELOLA GYM', home: true, homeScore: 5, awayScore: 4, status: 'En juego' },
+]
+
+export const clubStanding = table.find((team) => team.team === clubTeamName) ?? table[0]
 
 export const topScorers = [...players].sort((a, b) => b.goals - a.goals)
 export const topAssists = [...players].sort((a, b) => b.assists - a.assists)
