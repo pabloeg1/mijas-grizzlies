@@ -19,7 +19,7 @@ export const players: Player[] = [
   { number: 16, name: 'Beltrán García', position: 'Mister', photo: '/jugadores/BELTRAN-GARCIA.png', age: 22, nationality: 'España', height: '1,77 m', foot: 'Derecho', appearances: 0, goals: 0, assists: 0, bio: 'La cabeza pensante del equipo, nuestro mister.' },
   { number: 17, name: 'Salvador Prieto', position: 'Ala', photo: '/jugadores/SALVADOR-PRIETO.png', age: 22, nationality: 'España', height: '1,75 m', foot: 'Derecho', appearances: 5, goals: 2, assists: 0, bio: 'Coraje y corazón por banda, no da un balon por perdido.' },
   { number: 19, name: 'Vladyslav Topolya', position: 'Ala', photo: '/jugadores/VLADYSLAV-TOPOLYA.png', age: 22, nationality: 'España', height: '1,75 m', foot: 'Derecho', appearances: 5, goals: 1, assists: 0, bio: 'Incansable, corre por todos. Desborde envidiable.' },
-  { number: 21, name: 'Hugo Cuesta', position: 'Pivot', photo: '/jugadores/HUGO-CUESTA.png', age: 22, nationality: 'España', height: '1,75 m', foot: 'Izquierdo', appearances: 1, goals: 0, assists: 0, bio: 'Esfuerzo innegociable. Nuestro presi.' },
+  { number: 21, name: 'Hugo Cuesta', position: 'Pivot', photo: '/jugadores/HUGO-CUESTA.png', age: 22, nationality: 'España', height: '1,75 m', foot: 'Izquierdo', appearances: 1, goals: 1, assists: 0, bio: 'Esfuerzo innegociable. Nuestro presi.' },
   { number: 47, name: 'Jairo Pérez', position: 'Ala', photo: '/jugadores/JAIRO-PEREZ.png', age: 22, nationality: 'España', height: '1,85 m', foot: 'Derecho', appearances: 4, goals: 0, assists: 0, bio: 'El compromiso en persona, un luchador nato.' },
   
 
