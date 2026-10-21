@@ -21,7 +21,7 @@ export const players: Player[] = [
   { number: 19, name: 'Vladyslav Topolya', position: 'Ala', photo: '/jugadores/VLADYSLAV-TOPOLYA.png', age: 22, nationality: 'España', height: '1,75 m', foot: 'Derecho', appearances: 5, goals: 1, assists: 0, bio: 'Incansable, corre por todos. Desborde envidiable.' },
   { number: 21, name: 'Hugo Cuesta', position: 'Pivot', photo: '/jugadores/HUGO-CUESTA.png', age: 22, nationality: 'España', height: '1,75 m', foot: 'Izquierdo', appearances: 1, goals: 1, assists: 0, bio: 'Esfuerzo innegociable. Nuestro presi.' },
   { number: 47, name: 'Jairo Pérez', position: 'Ala', photo: '/jugadores/JAIRO-PEREZ.png', age: 22, nationality: 'España', height: '1,85 m', foot: 'Derecho', appearances: 4, goals: 0, assists: 0, bio: 'El compromiso en persona, un luchador nato.' },
-  { number: 00, name: 'Roberto Méndez', position: 'Ala', photo: '/jugadores/ROBERTO-MENDEZ.png', age: 22, nationality: 'España', height: '1,79 m', foot: 'Derecho', appearances: 0, goals: 0, assists: 0, bio: 'Nuestra última incorporación, la definición de polivalencia.' },
+  { number: 99, name: 'Roberto Méndez', position: 'Ala', photo: '/jugadores/ROBERTO-MENDEZ.png', age: 22, nationality: 'España', height: '1,79 m', foot: 'Derecho', appearances: 0, goals: 0, assists: 0, bio: 'Nuestra última incorporación, la definición de polivalencia.' }
 
 
 ]
